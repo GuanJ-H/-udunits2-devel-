@@ -9,7 +9,7 @@ Include: yum
 %environment 
 
 %runscript
-exec /octave-4.4.1/run-octave "$@"
+
 
 %post
     # commands to be executed inside container during bootstrap
@@ -24,28 +24,7 @@ exec /octave-4.4.1/run-octave "$@"
     yum -y install SDL SDL-devel
     yum install -y epel-release
 #    yum -y update
-    yum -y install qtwebkit
-    yum -y install qt5-qtbase-devel   
-    yum -y install yum-utils
-    yum-builddep -y octave
-    yum -y install qt-devel mercurial gcc-c++ lapack-devel libtool
-    yum -y install epstool transfig pstoedit qscintilla-devel
-    yum -y install librsvg2-tools icoutils bzip2-devel libsndfile-devel
-    yum -y install portaudio-devel mesa-libOSMesa-devel 
-    yum -y install sundials-devel sundials-threads-devel
-    yum -y install gnulib-devel
-    yum -y install arpack-devel arpack2-dev libarpack2-dev
-    export JAVA_HOME=/usr/lib/jvm/java
-    
-    
-    wget ftp://ftp.gnu.org/gnu/octave/octave-4.4.1.tar.xz 
-    tar xf octave-4.4.1.tar.xz 
-    rm octave-4.4.1.tar.xz 
-    cd octave-4.4.1/ 
-    ./configure --with-qt=4 --with-arpack-libdir=/usr/lib64/
-    make -j6 all
-    make check
-    make install
+    yum -y install udunits2-devel 
     
     mkdir -p /storage/home
     mkdir -p /storage/work
