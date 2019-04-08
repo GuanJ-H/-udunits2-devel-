@@ -43,10 +43,8 @@ exec /bin/R "$@"
     yum -y install gmp-devel
     yum -y install mpfr-devel
     yum -y install mpfr-devel
-    yum -y install gdal.x86_64 gdal-devel.x86_64 gdal-libs.x86_64 
-    yum -y install proj.x86_64 proj-devel.x86_64 
-    yum -y install proj-epsg.x86_64 proj-nad.x86_64
-    yum install -y udunits2-devel 
+    yum -y install gdal-devel gdal
+    yum -y install udunits2-devel 
     yum -y install R
 
     mkdir -p /storage/home
