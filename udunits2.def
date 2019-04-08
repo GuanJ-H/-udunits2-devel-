@@ -17,7 +17,7 @@ export SHELL
 
 
 %runscript
-
+exec /bin/R "$@"
 
 %post
     # commands to be executed inside container during bootstrap
