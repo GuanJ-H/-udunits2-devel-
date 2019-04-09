@@ -44,9 +44,12 @@ exec /bin/R "$@"
     yum -y install mpfr-devel
     yum -y install mpfr-devel
     yum -y install udunits2-devel 
-    yum -y install https://www.rpmfind.net/linux/fedora/linux/updates/29/Everything/x86_64/Packages/g/gdal-2.3.2-1.fc29.x86_64.rpm 
-    yum -y install https://rpmfind.net/linux/fedora/linux/releases/28/Everything/x86_64/os/Packages/g/gdal-devel-2.2.4-2.fc28.x86_64.rpm 
-    yum -y install proj-devel geos-devel
+    mkdir gdal 
+    cd gdal/ 
+    git clone https://github.com/spack/spack.git 
+    . spack/share/spack/setup-env.sh 
+    spack install gdal 
+    cd ..
     yum -y install R
 
     mkdir -p /storage/home
