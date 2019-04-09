@@ -44,7 +44,7 @@ exec /bin/R "$@"
     yum -y install mpfr-devel
     yum -y install mpfr-devel
     yum -y install gdal-devel gdal
-    yum -y install udunits2-devel 
+    yum -y install libudunits2-dev libgdal-dev libgeos-dev libproj-dev
     yum -y install R
 
     mkdir -p /storage/home
